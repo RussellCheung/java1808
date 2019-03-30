@@ -9,7 +9,10 @@ import java.util.List;
  * Indian
  */
 public class Test {
-
+    /**
+     * China NO.1
+     * @param args
+     */
     public static void main(String[] args) {
         //线程1
         new Thread(new Runnable() {
