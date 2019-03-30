@@ -2,15 +2,15 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <!DOCTYPE html>
-<!-- saved from url=(0036)http://localhost:8081/cust/goods/add -->
+<!-- saved from url=(0036)http://localhost:'8088/cust/goods/add -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link href="./static/default.css" rel="stylesheet" id="lhgdialoglink">
 
 	<title>商品管理</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<!-- head start-->
 
-	<link rel="shortcut icon" href="http://localhost:8081/wxb/images/favicon.ico">
-	<link rel="icon" type="image/gif" href="http://localhost:8081/wxb/images/favicon.gif">
+	<link rel="shortcut icon" href="http://localhost:'8088/wxb/images/favicon.ico">
+	<link rel="icon" type="image/gif" href="http://localhost:'8088/wxb/images/favicon.gif">
 	<link href="./static/bootstrap.min.css" rel="stylesheet">
 	<link rel="stylesheet" href="./static/font-awesome.min.css">
 	<!--[if IE 7]>
@@ -53,7 +53,7 @@
 
 	<div class="navbar-container" id="navbar-container">
 		<div class="navbar-header pull-left">
-			<a href="http://localhost:8081/cust/index" class="navbar-brand">
+			<a href="http://localhost:'8088/cust/index" class="navbar-brand">
 				<small>
 					<i class="icon-leaf"></i>
 					微信公众号盈利平台-商户后台管理
@@ -65,7 +65,7 @@
 			<ul class="nav ace-nav">
 
 				<li class="light-blue">
-					<a data-toggle="dropdown" href="http://localhost:8081/cust/goods/add#" class="dropdown-toggle">
+					<a data-toggle="dropdown" href="http://localhost:'8088/cust/goods/add#" class="dropdown-toggle">
 						<img class="nav-user-photo" src="./static/user.jpg" alt="Jason's Photo">
 						<span class="user-info">
 									<small>欢迎您,</small>
@@ -77,14 +77,14 @@
 
 					<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
 						<li>
-							<a href="http://localhost:8081/cust/chpwd">
+							<a href="http://localhost:'8088/cust/chpwd">
 								<i class="icon-cog"></i>
 								修改密码
 							</a>
 						</li>
 
 						<li>
-							<a href="http://localhost:8081/cust/setting">
+							<a href="http://localhost:'8088/cust/setting">
 								<i class="icon-user"></i>
 								个人资料
 							</a>
@@ -93,7 +93,7 @@
 						<li class="divider"></li>
 
 						<li>
-							<a href="http://localhost:8081/cust/logout">
+							<a href="http://localhost:'8088/cust/logout">
 								<i class="icon-off"></i>
 								退出登录
 							</a>
@@ -112,7 +112,7 @@
 	</script>
 
 	<div class="main-container-inner">
-		<a class="menu-toggler" id="menu-toggler" href="http://localhost:8081/cust/goods/add#">
+		<a class="menu-toggler" id="menu-toggler" href="http://localhost:'8088/cust/goods/add#">
 			<span class="menu-text"></span>
 		</a>
 
@@ -156,14 +156,14 @@
 
 			<ul class="nav nav-list">
 				<li>
-					<a href="http://localhost:8081/cust/index">
+					<a href="http://localhost:'8088/cust/index">
 						<i class="icon-home"></i>
 						<span class="menu-text"> 系统首页 </span>
 					</a>
 				</li>
 
 				<li class="active open">
-					<a href="http://localhost:8081/cust/goods/add#" class="dropdown-toggle">
+					<a href="http://localhost:'8088/cust/goods/add#" class="dropdown-toggle">
 						<i class="icon-list"></i>
 						<span class="menu-text"> 商品管理 </span>
 
@@ -172,41 +172,41 @@
 
 					<ul class="submenu">
 						<li>
-							<a href="http://localhost:8081/cust/goods/list">
+							<a href="goods_list.jsp">
 								<i class="icon-double-angle-right"></i>
 								商品信息
 							</a>
 						</li>
 
 						<li class="active">
-							<a href="http://localhost:8081/cust/goods/add">
+							<a href="http://localhost:'8088/cust/goods/add">
 								<i class="icon-pencil"></i>
 								增加商品
 							</a>
 						</li>
 						<li>
-							<a href="http://localhost:8081/cust/goods/copy/list">
+							<a href="http://localhost:'8088/cust/goods/copy/list">
 								<i class="icon-double-angle-right"></i>
 								商品文案
 							</a>
 						</li>
 
 						<li>
-							<a href="http://localhost:8081/cust/goods/copy/add?tp=0">
+							<a href="http://localhost:'8088/cust/goods/copy/add?tp=0">
 								<i class="icon-pencil"></i>
 								增加微信文案
 							</a>
 						</li>
 
 						<li>
-							<a href="http://localhost:8081/cust/goods/copy/add?tp=1">
+							<a href="http://localhost:'8088/cust/goods/copy/add?tp=1">
 								<i class="icon-pencil"></i>
 								增加站内文案
 							</a>
 						</li>
 
 						<li>
-							<a href="http://localhost:8081/cust/goods/copy/add?tp=2">
+							<a href="http://localhost:'8088/cust/goods/copy/add?tp=2">
 								<i class="icon-pencil"></i>
 								增加空间文案
 							</a>
@@ -215,7 +215,7 @@
 				</li>
 
 				<li>
-					<a href="http://localhost:8081/cust/goods/add#" class="dropdown-toggle">
+					<a href="http://localhost:'8088/cust/goods/add#" class="dropdown-toggle">
 						<i class="icon-tag"></i>
 						<span class="menu-text"> 订单管理 </span>
 
@@ -225,70 +225,70 @@
 					<ul class="submenu">
 
 						<li>
-							<a href="http://localhost:8081/cust/order/list">
+							<a href="http://localhost:'8088/cust/order/list">
 								<i class="icon-double-angle-right"></i>
 								全部的订单
 							</a>
 						</li>
 
 						<li>
-							<a href="http://localhost:8081/cust/order/list/1">
+							<a href="http://localhost:'8088/cust/order/list/1">
 								<i class="icon-double-angle-right"></i>
 								已下单订单
 							</a>
 						</li>
 
 						<li>
-							<a href="http://localhost:8081/cust/order/list/9">
+							<a href="http://localhost:'8088/cust/order/list/9">
 								<i class="icon-double-angle-right"></i>
 								待跟进订单
 							</a>
 						</li>
 
 						<li>
-							<a href="http://localhost:8081/cust/order/list/2">
+							<a href="http://localhost:'8088/cust/order/list/2">
 								<i class="icon-double-angle-right"></i>
 								待发货订单
 							</a>
 						</li>
 
 						<li>
-							<a href="http://localhost:8081/cust/order/list/3">
+							<a href="http://localhost:'8088/cust/order/list/3">
 								<i class="icon-double-angle-right"></i>
 								已取消订单
 							</a>
 						</li>
 
 						<li>
-							<a href="http://localhost:8081/cust/order/list/4">
+							<a href="http://localhost:'8088/cust/order/list/4">
 								<i class="icon-double-angle-right"></i>
 								已发货订单
 							</a>
 						</li>
 
 						<li>
-							<a href="http://localhost:8081/cust/order/list/5">
+							<a href="http://localhost:'8088/cust/order/list/5">
 								<i class="icon-double-angle-right"></i>
 								已结算订单
 							</a>
 						</li>
 
 						<li>
-							<a href="http://localhost:8081/cust/order/list/6">
+							<a href="http://localhost:'8088/cust/order/list/6">
 								<i class="icon-double-angle-right"></i>
 								已拒收订单
 							</a>
 						</li>
 
 						<li>
-							<a href="http://localhost:8081/cust/order/list/7">
+							<a href="http://localhost:'8088/cust/order/list/7">
 								<i class="icon-double-angle-right"></i>
 								已签收订单
 							</a>
 						</li>
 
 						<li>
-							<a href="http://localhost:8081/cust/order/list/8">
+							<a href="http://localhost:'8088/cust/order/list/8">
 								<i class="icon-double-angle-right"></i>
 								已退货订单
 							</a>
@@ -299,7 +299,7 @@
 
 
 				<li>
-					<a href="http://localhost:8081/cust/goods/add#" class="dropdown-toggle">
+					<a href="http://localhost:'8088/cust/goods/add#" class="dropdown-toggle">
 						<i class="icon-bar-chart"></i>
 						<span class="menu-text"> 统计报表</span>
 
@@ -309,7 +309,7 @@
 					<ul class="submenu">
 
 						<li>
-							<a href="http://localhost:8081/cust/report/good">
+							<a href="http://localhost:'8088/cust/report/good">
 								<i class="icon-double-angle-right"></i>
 								商品销售统计
 							</a>
@@ -319,7 +319,7 @@
 				</li>
 
 				<li>
-					<a href="http://localhost:8081/cust/goods/add#" class="dropdown-toggle">
+					<a href="http://localhost:'8088/cust/goods/add#" class="dropdown-toggle">
 						<i class="icon-credit-card"></i>
 
 						<span class="menu-text">
@@ -332,35 +332,35 @@
 					<ul class="submenu">
 
 						<li>
-							<a href="http://localhost:8081/cust/order/count/1">
+							<a href="http://localhost:'8088/cust/order/count/1">
 								<i class="icon-double-angle-right"></i>
 								待结算流水
 							</a>
 						</li>
 
 						<li>
-							<a href="http://localhost:8081/cust/order/count/2">
+							<a href="http://localhost:'8088/cust/order/count/2">
 								<i class="icon-double-angle-right"></i>
 								已结算流水
 							</a>
 						</li>
 
 						<li>
-							<a href="http://localhost:8081/cust/order/count/3">
+							<a href="http://localhost:'8088/cust/order/count/3">
 								<i class="icon-double-angle-right"></i>
 								已返款流水
 							</a>
 						</li>
 
 						<li>
-							<a href="http://localhost:8081/cust/order/money">
+							<a href="http://localhost:'8088/cust/order/money">
 								<i class="icon-double-angle-right"></i>
 								财务返款单
 							</a>
 						</li>
 
 						<li>
-							<a href="http://localhost:8081/cust/order/paylog">
+							<a href="http://localhost:'8088/cust/order/paylog">
 								<i class="icon-double-angle-right"></i>
 								支付宝记录
 							</a>
@@ -376,7 +376,7 @@
 				</li>
 
 				<li>
-					<a href="http://localhost:8081/cust/goods/add#" class="dropdown-toggle">
+					<a href="http://localhost:'8088/cust/goods/add#" class="dropdown-toggle">
 						<i class="icon-group"></i>
 
 						<span class="menu-text">
@@ -388,14 +388,14 @@
 
 					<ul class="submenu">
 						<li>
-							<a href="http://localhost:8081/cust/setting">
+							<a href="http://localhost:'8088/cust/setting">
 								<i class="icon-double-angle-right"></i>
 								基本信息
 							</a>
 						</li>
 
 						<li>
-							<a href="http://localhost:8081/cust/chpwd">
+							<a href="http://localhost:'8088/cust/chpwd">
 								<i class="icon-double-angle-right"></i>
 								修改密码
 							</a>
@@ -426,15 +426,15 @@
 				<ul class="breadcrumb">
 					<li>
 						<i class="icon-home home-icon"></i>
-						<a href="http://localhost:8081/cust/index">首页</a>
+						<a href="http://localhost:'8088/cust/index">首页</a>
 					</li>
 
 					<li>
-						<a href="http://localhost:8081/cust/goods/list">商品管理</a>
+						<a href="http://localhost:'8088/cust/goods/list">商品管理</a>
 					</li>
 
 					<li>
-						<a href="http://localhost:8081/cust/goods/add">增加商品</a>
+						<a href="http://localhost:'8088/cust/goods/add">增加商品</a>
 					</li>
 
 				</ul><!-- .breadcrumb -->
@@ -451,7 +451,7 @@
 					</h1>
 				</div>
 
-				<form method="post" name="copy_form" id="copy_form" action="http://localhost:8081/cust/goods/add" enctype="multipart/form-data">
+				<form method="post" name="copy_form" id="copy_form" action="http://localhost:'8088/cust/goods/add" enctype="multipart/form-data">
 					<div class="widget-main">
 						<input type="hidden" id="sku_str" name="sku_str" value="">
 						<input type="hidden" id="ctype" name="ctype" value="custGood">
@@ -660,7 +660,7 @@
 
 
 									<input type="checkbox" class="ace" id="copy_1887427" name="gcopy" value="1887427">
-									<span class="lbl">&nbsp;<a href="http://localhost:8081/cust/goods/add#">11</a></span><br>
+									<span class="lbl">&nbsp;<a href="http://localhost:'8088/cust/goods/add#">11</a></span><br>
 
 
 
@@ -681,7 +681,7 @@
 
 
 									<input type="checkbox" class="ace" id="copy_39201701" name="zcopy_id" value="39201701">
-									<span class="lbl">&nbsp;<a href="http://localhost:8081/cust/goods/add#">12</a></span><br>
+									<span class="lbl">&nbsp;<a href="http://localhost:'8088/cust/goods/add#">12</a></span><br>
 
 
 
@@ -724,7 +724,7 @@
 
 	</div><!-- /.main-container-inner -->
 
-	<a href="http://localhost:8081/cust/goods/add#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+	<a href="http://localhost:'8088/cust/goods/add#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
 		<i class="icon-double-angle-up icon-only bigger-110"></i>
 	</a>
 </div><!-- /.main-container -->

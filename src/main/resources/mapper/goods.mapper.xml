@@ -67,6 +67,8 @@
 
     </resultMap>
 
+
+
     <!--sql标签用来定义SQL语句，或者是部分SQL语句-->
     <sql id="params">
         good_id,good_name,customer_id,good_pic,good_pic1,good_pic2,promote_desc,sku_title,sku_cost,
