@@ -2,6 +2,7 @@ package com.qianfeng.fxmall.goods.bean;
 
 
 import java.io.Serializable;
+import java.util.List;
 
 public class WxbGood implements Serializable {
 
@@ -19,23 +20,33 @@ public class WxbGood implements Serializable {
   private String copyIds;
   private String copyDesc;
   private String forwardLink;
-  private long orderNo;
+  private Integer orderNo;
   private String typeId;
   private String tags;
-  private long state;
+  private Integer state;
   private java.sql.Timestamp createTime;
-  private long toped;
-  private long recomed;
+  private Integer toped;
+  private Integer recomed;
   private java.sql.Timestamp topedTime;
   private java.sql.Timestamp recomedTime;
   private String spcId;
   private String zonId;
-  private long sellNum;
+  private Integer sellNum;
   private String website;
-  private long iswxpay;
-  private long isfdfk;
-  private long leixingId;
+  private Integer iswxpay;
+  private Integer isfdfk;
+  private Integer leixingId;
   private String kfqq;
+
+  private List<WxbGoodSku> skuList;
+
+  public List<WxbGoodSku> getSkuList() {
+    return skuList;
+  }
+
+  public void setSkuList(List<WxbGoodSku> skuList) {
+    this.skuList = skuList;
+  }
 
 
   public String getGoodId() {
@@ -46,7 +57,6 @@ public class WxbGood implements Serializable {
     this.goodId = goodId;
   }
 
-
   public String getGoodName() {
     return goodName;
   }
@@ -54,7 +64,6 @@ public class WxbGood implements Serializable {
   public void setGoodName(String goodName) {
     this.goodName = goodName;
   }
-
 
   public String getCustomerId() {
     return customerId;
@@ -64,7 +73,6 @@ public class WxbGood implements Serializable {
     this.customerId = customerId;
   }
 
-
   public String getGoodPic() {
     return goodPic;
   }
@@ -72,7 +80,6 @@ public class WxbGood implements Serializable {
   public void setGoodPic(String goodPic) {
     this.goodPic = goodPic;
   }
-
 
   public String getGoodPic1() {
     return goodPic1;
@@ -82,7 +89,6 @@ public class WxbGood implements Serializable {
     this.goodPic1 = goodPic1;
   }
 
-
   public String getGoodPic2() {
     return goodPic2;
   }
@@ -90,7 +96,6 @@ public class WxbGood implements Serializable {
   public void setGoodPic2(String goodPic2) {
     this.goodPic2 = goodPic2;
   }
-
 
   public String getPromoteDesc() {
     return promoteDesc;
@@ -100,7 +105,6 @@ public class WxbGood implements Serializable {
     this.promoteDesc = promoteDesc;
   }
 
-
   public String getSkuTitle() {
     return skuTitle;
   }
@@ -108,7 +112,6 @@ public class WxbGood implements Serializable {
   public void setSkuTitle(String skuTitle) {
     this.skuTitle = skuTitle;
   }
-
 
   public String getSkuCost() {
     return skuCost;
@@ -118,7 +121,6 @@ public class WxbGood implements Serializable {
     this.skuCost = skuCost;
   }
 
-
   public String getSkuPrice() {
     return skuPrice;
   }
@@ -126,7 +128,6 @@ public class WxbGood implements Serializable {
   public void setSkuPrice(String skuPrice) {
     this.skuPrice = skuPrice;
   }
-
 
   public String getSkuPmoney() {
     return skuPmoney;
@@ -136,7 +137,6 @@ public class WxbGood implements Serializable {
     this.skuPmoney = skuPmoney;
   }
 
-
   public String getCopyIds() {
     return copyIds;
   }
@@ -144,7 +144,6 @@ public class WxbGood implements Serializable {
   public void setCopyIds(String copyIds) {
     this.copyIds = copyIds;
   }
-
 
   public String getCopyDesc() {
     return copyDesc;
@@ -154,7 +153,6 @@ public class WxbGood implements Serializable {
     this.copyDesc = copyDesc;
   }
 
-
   public String getForwardLink() {
     return forwardLink;
   }
@@ -163,15 +161,13 @@ public class WxbGood implements Serializable {
     this.forwardLink = forwardLink;
   }
 
-
-  public long getOrderNo() {
+  public Integer getOrderNo() {
     return orderNo;
   }
 
-  public void setOrderNo(long orderNo) {
+  public void setOrderNo(Integer orderNo) {
     this.orderNo = orderNo;
   }
-
 
   public String getTypeId() {
     return typeId;
@@ -181,7 +177,6 @@ public class WxbGood implements Serializable {
     this.typeId = typeId;
   }
 
-
   public String getTags() {
     return tags;
   }
@@ -190,15 +185,13 @@ public class WxbGood implements Serializable {
     this.tags = tags;
   }
 
-
-  public long getState() {
+  public Integer getState() {
     return state;
   }
 
-  public void setState(long state) {
+  public void setState(Integer state) {
     this.state = state;
   }
-
 
   public java.sql.Timestamp getCreateTime() {
     return createTime;
@@ -208,24 +201,21 @@ public class WxbGood implements Serializable {
     this.createTime = createTime;
   }
 
-
-  public long getToped() {
+  public Integer getToped() {
     return toped;
   }
 
-  public void setToped(long toped) {
+  public void setToped(Integer toped) {
     this.toped = toped;
   }
 
-
-  public long getRecomed() {
+  public Integer getRecomed() {
     return recomed;
   }
 
-  public void setRecomed(long recomed) {
+  public void setRecomed(Integer recomed) {
     this.recomed = recomed;
   }
-
 
   public java.sql.Timestamp getTopedTime() {
     return topedTime;
@@ -235,7 +225,6 @@ public class WxbGood implements Serializable {
     this.topedTime = topedTime;
   }
 
-
   public java.sql.Timestamp getRecomedTime() {
     return recomedTime;
   }
@@ -243,7 +232,6 @@ public class WxbGood implements Serializable {
   public void setRecomedTime(java.sql.Timestamp recomedTime) {
     this.recomedTime = recomedTime;
   }
-
 
   public String getSpcId() {
     return spcId;
@@ -253,7 +241,6 @@ public class WxbGood implements Serializable {
     this.spcId = spcId;
   }
 
-
   public String getZonId() {
     return zonId;
   }
@@ -262,15 +249,13 @@ public class WxbGood implements Serializable {
     this.zonId = zonId;
   }
 
-
-  public long getSellNum() {
+  public Integer getSellNum() {
     return sellNum;
   }
 
-  public void setSellNum(long sellNum) {
+  public void setSellNum(Integer sellNum) {
     this.sellNum = sellNum;
   }
-
 
   public String getWebsite() {
     return website;
@@ -280,33 +265,29 @@ public class WxbGood implements Serializable {
     this.website = website;
   }
 
-
-  public long getIswxpay() {
+  public Integer getIswxpay() {
     return iswxpay;
   }
 
-  public void setIswxpay(long iswxpay) {
+  public void setIswxpay(Integer iswxpay) {
     this.iswxpay = iswxpay;
   }
 
-
-  public long getIsfdfk() {
+  public Integer getIsfdfk() {
     return isfdfk;
   }
 
-  public void setIsfdfk(long isfdfk) {
+  public void setIsfdfk(Integer isfdfk) {
     this.isfdfk = isfdfk;
   }
 
-
-  public long getLeixingId() {
+  public Integer getLeixingId() {
     return leixingId;
   }
 
-  public void setLeixingId(long leixingId) {
+  public void setLeixingId(Integer leixingId) {
     this.leixingId = leixingId;
   }
-
 
   public String getKfqq() {
     return kfqq;
@@ -316,4 +297,86 @@ public class WxbGood implements Serializable {
     this.kfqq = kfqq;
   }
 
+  public WxbGood(String goodId, String goodName, String customerId,
+                 String goodPic, String goodPic1, String goodPic2,
+                 String promoteDesc, String skuTitle, String skuCost,
+                 String skuPrice, String skuPmoney, String copyIds,
+                 String copyDesc, String forwardLink, Integer orderNo,
+                 String typeId, String tags, Integer state, java.sql.Timestamp createTime,
+                 Integer toped, Integer recomed, java.sql.Timestamp topedTime, java.sql.Timestamp recomedTime,
+                 String spcId, String zonId, Integer sellNum, String website,
+                 Integer iswxpay, Integer isfdfk, Integer leixingId, String kfqq) {
+    this.goodId = goodId;
+    this.goodName = goodName;
+    this.customerId = customerId;
+    this.goodPic = goodPic;
+    this.goodPic1 = goodPic1;
+    this.goodPic2 = goodPic2;
+    this.promoteDesc = promoteDesc;
+    this.skuTitle = skuTitle;
+    this.skuCost = skuCost;
+    this.skuPrice = skuPrice;
+    this.skuPmoney = skuPmoney;
+    this.copyIds = copyIds;
+    this.copyDesc = copyDesc;
+    this.forwardLink = forwardLink;
+    this.orderNo = orderNo;
+    this.typeId = typeId;
+    this.tags = tags;
+    this.state = state;
+    this.createTime = createTime;
+    this.toped = toped;
+    this.recomed = recomed;
+    this.topedTime = topedTime;
+    this.recomedTime = recomedTime;
+    this.spcId = spcId;
+    this.zonId = zonId;
+    this.sellNum = sellNum;
+    this.website = website;
+    this.iswxpay = iswxpay;
+    this.isfdfk = isfdfk;
+    this.leixingId = leixingId;
+    this.kfqq = kfqq;
+  }
+
+  public WxbGood() {
+  }
+
+  @Override
+  public String toString() {
+    return "WxbGood{" +
+            "goodId='" + goodId + '\'' +
+            ", goodName='" + goodName + '\'' +
+            ", customerId='" + customerId + '\'' +
+            ", goodPic='" + goodPic + '\'' +
+            ", goodPic1='" + goodPic1 + '\'' +
+            ", goodPic2='" + goodPic2 + '\'' +
+            ", promoteDesc='" + promoteDesc + '\'' +
+            ", skuTitle='" + skuTitle + '\'' +
+            ", skuCost='" + skuCost + '\'' +
+            ", skuPrice='" + skuPrice + '\'' +
+            ", skuPmoney='" + skuPmoney + '\'' +
+            ", copyIds='" + copyIds + '\'' +
+            ", copyDesc='" + copyDesc + '\'' +
+            ", forwardLink='" + forwardLink + '\'' +
+            ", orderNo=" + orderNo +
+            ", typeId='" + typeId + '\'' +
+            ", tags='" + tags + '\'' +
+            ", state=" + state +
+            ", createTime=" + createTime +
+            ", toped=" + toped +
+            ", recomed=" + recomed +
+            ", topedTime=" + topedTime +
+            ", recomedTime=" + recomedTime +
+            ", spcId='" + spcId + '\'' +
+            ", zonId='" + zonId + '\'' +
+            ", sellNum=" + sellNum +
+            ", website='" + website + '\'' +
+            ", iswxpay=" + iswxpay +
+            ", isfdfk=" + isfdfk +
+            ", leixingId=" + leixingId +
+            ", kfqq='" + kfqq + '\'' +
+            ", skuList=" + skuList +
+            '}';
+  }
 }

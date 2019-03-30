@@ -12,17 +12,14 @@ import java.io.InputStream;
  * sessionfactory的封装：做到全局唯一
  */
 public class MyBatisSessionFactoryUtils {
-
     /**
      * 饿汉单利
      */
     public static SqlSessionFactory sqlSessionFactory ;
     private static ThreadLocal<SqlSession> threadLocal = new ThreadLocal<>();
-
     static {
         initSessionFactory();
     }
-
     private static void initSessionFactory(){
         try {
             //1、配置文件只需要加载一次（全局）
@@ -33,14 +30,12 @@ public class MyBatisSessionFactoryUtils {
             e.printStackTrace();
         }
     }
-
     public static SqlSessionFactory getSqlSessionFactory(){
         if (sqlSessionFactory == null) {
             initSessionFactory();
         }
         return sqlSessionFactory;
     }
-
     public static SqlSession getSession(){
         System.out.println(Thread.currentThread().getName());
         SqlSession session = threadLocal.get();
@@ -50,9 +45,4 @@ public class MyBatisSessionFactoryUtils {
         }
         return session;
     }
-
-
-
-
-
 }

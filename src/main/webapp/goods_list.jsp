@@ -1,20 +1,11 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: yangjw
-  Date: 2019/3/28
-  Time: 15:05
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
 <!-- saved from url=(0037)http://localhost:8088/cust/goods/list -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link href="./static/default.css" rel="stylesheet" id="lhgdialoglink">
-
     <title>商品信息管理</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- head start-->
-
     <link rel="shortcut icon" href="http://localhost:8088/wxb/images/favicon.ico">
     <link rel="icon" type="image/gif" href="http://localhost:8088/wxb/images/favicon.gif">
     <link href="./static/bootstrap.min.css" rel="stylesheet">
@@ -31,13 +22,11 @@
     <link rel="stylesheet" href="/customer/assets/css/ace-ie.min.css" />
     <![endif]-->
     <link type="text/css" rel="stylesheet" href="./static/public.css">
-
     <script src="./static/ace-extra.min.js"></script>
     <!--[if lt IE 9]>
     <script src="/customer/assets/js/html5shiv.js"></script>
     <script src="/customer/assets/js/respond.min.js"></script>
     <![endif]-->
-
     <!-- 系统共用js文件 -->
     <link rel="stylesheet" type="text/css" href="./static/ymPrompt.css">
     <script type="text/javascript" src="./static/ymPrompt.js"></script>
@@ -45,18 +34,14 @@
     <script type="text/javascript" src="./static/publics.js"></script>
     <script type="text/javascript" src="./static/table.js"></script>
     <script type="text/javascript" src="./static/vdata.js"></script>
-
     <!-- head over-->
     <link href="./static/WdatePicker.css" rel="stylesheet" type="text/css"></head>
-
 <body style=""><div class="" style="left: 0px; top: 0px; visibility: hidden; position: absolute;"><table class="ui_border"><tbody><tr><td class="ui_lt"></td><td class="ui_t"></td><td class="ui_rt"></td></tr><tr><td class="ui_l"></td><td class="ui_c"><div class="ui_inner"><table class="ui_dialog"><tbody><tr><td colspan="2"><div class="ui_title_bar"><div class="ui_title" unselectable="on" style="cursor: move;"></div><div class="ui_title_buttons"><a class="ui_min" href="javascript:void(0);" title="最小化" style="display: inline-block;"><b class="ui_min_b"></b></a><a class="ui_max" href="javascript:void(0);" title="最大化" style="display: inline-block;"><b class="ui_max_b"></b></a><a class="ui_res" href="javascript:void(0);" title="还原"><b class="ui_res_b"></b><b class="ui_res_t"></b></a><a class="ui_close" href="javascript:void(0);" title="关闭(esc键)" style="display: inline-block;">×</a></div></div></td></tr><tr><td class="ui_icon" style="display: none;"></td><td class="ui_main" style="width: auto; height: auto;"><div class="ui_content" style="padding: 10px;"></div></td></tr><tr><td colspan="2"><div class="ui_buttons" style="display: none;"></div></td></tr></tbody></table></div></td><td class="ui_r"></td></tr><tr><td class="ui_lb"></td><td class="ui_b"></td><td class="ui_rb" style="cursor: se-resize;"></td></tr></tbody></table></div>
 <div class="navbar navbar-default" id="navbar">
     <script type="text/javascript">
         try{ace.settings.check('navbar' , 'fixed')}catch(e){}
     </script>
-
     <!-- head start-->
-
     <div class="navbar-container" id="navbar-container">
         <div class="navbar-header pull-left">
             <a href="http://localhost:8088/cust/index" class="navbar-brand">
@@ -88,16 +73,13 @@
                                 修改密码
                             </a>
                         </li>
-
                         <li>
                             <a href="http://localhost:8088/cust/setting">
                                 <i class="icon-user"></i>
                                 个人资料
                             </a>
                         </li>
-
                         <li class="divider"></li>
-
                         <li>
                             <a href="http://localhost:8088/cust/logout">
                                 <i class="icon-off"></i>
@@ -111,55 +93,41 @@
     </div><!-- /.container -->
     <!-- head over-->
 </div>
-
 <div class="main-container" id="main-container">
     <script type="text/javascript">
         try{ace.settings.check('main-container' , 'fixed')}catch(e){}
     </script>
-
     <div class="main-container-inner">
         <a class="menu-toggler" id="menu-toggler" href="http://localhost:8088/cust/goods/list#">
             <span class="menu-text"></span>
         </a>
-
         <!-- head start-->
-
-
         <div class="sidebar" id="sidebar">
             <script type="text/javascript">
                 try{ace.settings.check('sidebar' , 'fixed')}catch(e){}
             </script>
-
             <div class="sidebar-shortcuts" id="sidebar-shortcuts">
                 <div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
                     <button class="btn btn-success" onclick="window.location.href='/cust/report/good'">
                         <i class="icon-signal"></i>
                     </button>
-
                     <button class="btn btn-info" onclick="window.location.href='/cust/setting'">
                         <i class="icon-pencil"></i>
                     </button>
-
                     <button class="btn btn-warning" onclick="window.location.href='/cust/order/count/1'">
                         <i class="icon-group"></i>
                     </button>
-
                     <button class="btn btn-danger" onclick="window.location.href='/cust/chpwd'">
                         <i class="icon-cogs"></i>
                     </button>
                 </div>
-
                 <div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
                     <span class="btn btn-success"></span>
-
                     <span class="btn btn-info"></span>
-
                     <span class="btn btn-warning"></span>
-
                     <span class="btn btn-danger"></span>
                 </div>
             </div><!-- #sidebar-shortcuts -->
-
             <ul class="nav nav-list">
                 <li>
                     <a href="http://localhost:8088/cust/index">
@@ -183,7 +151,6 @@
                                 商品信息
                             </a>
                         </li>
-
                         <li>
                             <a href="goods_add.jsp">
                                 <i class="icon-pencil"></i>
@@ -533,8 +500,6 @@
                                                     <li><a href="goods.do?page=2">2</a></li>
                                                     <li><a href="goods.do?page=3">3</a></li>
                                                 </ul>
-
-
                                             </div>
                                         </div>
 

@@ -1,7 +1,6 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <!DOCTYPE html>
-<!DOCTYPE html>
 <!-- saved from url=(0036)http://localhost:'8088/cust/goods/add -->
 <html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><link href="./static/default.css" rel="stylesheet" id="lhgdialoglink">
 
@@ -476,15 +475,12 @@
 								<td>
 									<input type="text" id="good_name" name="good_name" value="">
 								</td>
-
 							</tr>
-
 							<tr>
 								<td align="right"><span class="red">*</span><strong>商品类型：</strong></td>
 								<td>
 									<select name="type_id" id="type_id" style="width:252px;font-size:14px" class="selectBox">
 										<option value="">请选择...</option>
-
 
 										<option value="01">保健品</option>
 
