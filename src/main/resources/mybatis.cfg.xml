@@ -13,11 +13,12 @@
                 <property name="driver" value="com.mysql.jdbc.Driver"/>
                 <property name="url" value="jdbc:mysql://localhost:3306/fxmall?useSSL=false"/>
                 <property name="username" value="root"/>
-                <property name="password" value="123456"/>
+                <property name="password" value="root"/>
             </dataSource>
         </environment>
     </environments>
     <mappers>
         <mapper resource="mapper/goods.mapper.xml"/>
+        <mapper resource="mapper/goodsku.mapper.xml"/>
     </mappers>
 </configuration>

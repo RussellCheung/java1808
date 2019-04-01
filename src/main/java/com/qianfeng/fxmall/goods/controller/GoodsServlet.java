@@ -1,9 +1,7 @@
 package com.qianfeng.fxmall.goods.controller;
-
 import com.qianfeng.fxmall.goods.bean.WxbGood;
 import com.qianfeng.fxmall.goods.service.IGoodsService;
 import com.qianfeng.fxmall.goods.service.impl.GoodsServiceImpl;
-
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

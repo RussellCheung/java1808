@@ -3,79 +3,131 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.qianfeng.fxmall.goods.mapper.GoodsMapper">
+    <!-- <resultMap id="baseResultMap" type="WxbGood">
+         <id property="goodId" column="good_id" javaType="java.lang.String"/>
+         <result property="goodName" column="good_name" javaType="java.lang.String"/>
+         <result property="customerId" column="customer_id"/>
+         <result property="goodPic" column="good_pic" />
+         <result property="goodPic1" column="good_pic1"/>
+         <result property="goodPic2" column="good_pic2" />
+         <result property="promoteDesc" column="promote_desc"/>
+         <result property="skuTitle" column="sku_title" />
+         <result property="skuCost" column="sku_cost" />
+         <result property="skuPrice" column="sku_price" />
+         <result property="skuPmoney" column="sku_pmoney"/>
+         <result property="copyIds" column="copy_ids" />
+         <result property="copyDesc" column="copy_desc" />
+         <result property="forwardLink" column="good_" />
+         <result property="orderNo" column="order_no" />
+         <result property="typeId" column="type_id" />
+         <result property="tags" column="tags" />
+         <result property="state" column="state" />
+         <result property="createTime" column="create_time" />
+         <result property="toped" column="toped" />
+         <result property="recomed" column="recomed" />
+         <result property="topedTime" column="toped_time"/>
+         <result property="recomedTime" column="recomed_time"/>
+         <result property="spcId" column="spc_id" />
+         <result property="zonId" column="zon_id"/>
+         <result property="sellNum" column="sell_num" />
+         <result property="website" column="website" />
+         <result property="iswxpay" column="iswxpay"/>
+         <result property="isfdfk" column="isfdfk" />
+         <result property="leixingId" column="leixing_id" />
+         <result property="kfqq" column="kfqq" />
+     </resultMap>
+     &lt;!&ndash;配置关联查询所对应的结果集&ndash;&gt;-->
 
-    <resultMap id="baseResultMap" type="com.qianfeng.fxmall.goods.bean.WxbGood">
-        <id property="goodId" column="good_id"/>
-        <result property="goodName" column="good_name"/>
+    <resultMap id="connResultMap" type="com.qianfeng.fxmall.goods.bean.WxbGood">
+        <id property="goodId" column="good_id" javaType="java.lang.String"/>
+        <result property="goodName" column="good_name" javaType="java.lang.String"/>
         <result property="customerId" column="customer_id"/>
-
-        <result property="goodPic" column="good_pic"/>
-
+        <result property="goodPic" column="good_pic" />
         <result property="goodPic1" column="good_pic1"/>
-
-        <result property="goodPic2" column="good_pic2"/>
-
+        <result property="goodPic2" column="good_pic2" />
         <result property="promoteDesc" column="promote_desc"/>
-
-        <result property="skuTitle" column="sku_title"/>
-
-        <result property="skuCost" column="sku_cost"/>
-
-        <result property="skuPrice" column="sku_price"/>
-
+        <result property="skuTitle" column="sku_title" />
+        <result property="skuCost" column="sku_cost" />
+        <result property="skuPrice" column="sku_price" />
         <result property="skuPmoney" column="sku_pmoney"/>
-
-        <result property="copyIds" column="copy_ids"/>
-
-        <result property="copyDesc" column="copy_desc"/>
-
-        <result property="forwardLink" column="forward_link"/>
-
-        <result property="orderNo" column="order_no"/>
-
-        <result property="typeId" column="type_id"/>
-
-        <result property="tags" column="tags"/>
-
-        <result property="state" column="state"/>
-
-        <result property="createTime" column="create_time"/>
-
-        <result property="toped" column="toped"/>
-
-        <result property="recomed" column="recomed"/>
-
+        <result property="copyIds" column="copy_ids" />
+        <result property="copyDesc" column="copy_desc" />
+        <result property="forwardLink" column="good_" />
+        <result property="orderNo" column="order_no" />
+        <result property="typeId" column="type_id" />
+        <result property="tags" column="tags" />
+        <result property="state" column="state" />
+        <result property="createTime" column="create_time" />
+        <result property="toped" column="toped" />
+        <result property="recomed" column="recomed" />
         <result property="topedTime" column="toped_time"/>
-
         <result property="recomedTime" column="recomed_time"/>
-
-        <result property="spcId" column="spc_id"/>
-
+        <result property="spcId" column="spc_id" />
         <result property="zonId" column="zon_id"/>
-
-        <result property="sellNum" column="sell_num"/>
-
-        <result property="website" column="website"/>
-
+        <result property="sellNum" column="sell_num" />
+        <result property="website" column="website" />
         <result property="iswxpay" column="iswxpay"/>
-
-        <result property="isfdfk" column="isfdfk"/>
-
-        <result property="leixingId" column="leixing_id"/>
-
+        <result property="isfdfk" column="isfdfk" />
+        <result property="leixingId" column="leixing_id" />
         <result property="kfqq" column="kfqq" />
-
+        <!--&lt;!&ndash;        配置集合属性，一对多
+                ofType集合的泛型
+                集合中的property须为oftype定义的pojo对象的属性
+                collection property="pojo的集合属性" ofType="集合中的pojo对象">&ndash;&gt;-->
+        <collection property="skuList" ofType="com.qianfeng.fxmall.goods.bean.WxbGoodSku">
+            <!--  &lt;!&ndash;id column="集合中pojo对象对应的表的主键字段" jdbcType="字段类型" property="集合中pojo对象的主键属性"&ndash;&gt;-->
+            <id property="skuId" column="sku_id" javaType="java.lang.String"/>
+            <!-- &lt;!&ndash;result column="可以为任意表的字段" jdbcType="字段类型" property="集合中的pojo对象的属性"&ndash;&gt;-->
+            <result property="skuName" column="sku_name" javaType="java.lang.String"/>
+            <result property="skuCost" column="sku_cost" javaType="java.lang.String"/>
+            <result property="skuPrice" column="sku_price" javaType="java.lang.String"/>
+            <result property="skuPmoney" column="sku_pmoney" javaType="java.lang.String"/>
+            <result property="goodId" column="good_id" javaType="java.lang.String"/>
+            <result property="orderNo" column="order_no" />
+            <result property="serviceMoney" column="service_money" javaType="java.lang.String"/>
+        </collection>
     </resultMap>
+    <!--新增-->
+    <!--?新增是否需要ResultMap？-->
+    <insert id="save"  >
+    insert into wxb_good(good_id, good_name, customer_id, good_pic, good_pic1, good_pic2,
+     promote_desc, sku_title, sku_cost, sku_price, sku_pmoney, copy_ids, copy_desc,
+     forward_link, order_no, type_id, tags, state, create_time, toped, recomed,
+     toped_time, recomed_time, spc_id, zon_id, sell_num, website, iswxpay, isfdfk,
+      leixing_id, kfqq) values(#{goodId},#{goodName},#{customerId},#{goodPic},
+      #{goodPic1},#{goodPic2},#{promoteDesc},#{skuTitle},#{skuCost},#{skuPrice},
+      #{skuPmoney},#{copyIds},#{copyDesc},#{forwardLink},#{orderNo},#{typeId},
+      #{tags},#{state},#{createTime},#{toped},#{recomed},#{topedTime},#{recomedTime},
+      #{spcId},#{zonId},#{sellNum},#{website},#{iswxpay},#{isfdfk},#{leixingId},#{kfqq})
+</insert>
+    <!--&lt;!&ndash;useGeneratedKeys为true表示需要返回数据库的自增主键的值，默认是false&ndash;&gt;
+     &lt;!&ndash; useGeneratedKeys="true" keyProperty="authorId" keyColumn="author_id"  此配置可以返回主键的值&ndash;&gt;
+     <update id="saveAndReturnId" useGeneratedKeys="true" keyProperty="goodId" keyColumn="good_id">
+         insert into wxb_good(good_name) values (#{goodName})
+     &lt;!&ndash;修改&ndash;&gt;
+     <update id="update">
+         update wxb_good set good_name=#{goodName} where good_id=#{goodId}
+     </update>
+     &lt;!&ndash;分页&ndash;&gt;
+     <select id="queryGoodInfoByPage" resultMap="baseResultMap">
+       select good_id,good_name from tb_good limit #{index},#{size}
+     </select>
+ -->
 
-    <!--sql标签用来定义SQL语句，或者是部分SQL语句-->
     <sql id="params">
         good_id,good_name,customer_id,good_pic,good_pic1,good_pic2,promote_desc,sku_title,sku_cost,
      sku_price,sku_pmoney,copy_ids,copy_desc,forward_link,order_no,type_id,tags,state,create_time,
      toped,recomed,toped_time,recomed_time,spc_id,zon_id,sell_num,website,iswxpay,isfdfk,leixing_id,kfqq
     </sql>
 
-    <select id="queryGoodsByPage" resultMap="baseResultMap">
-        select  <include refid="params"/> from wxb_good limit #{index},#{size}
+
+    <!--一对多-->
+    <select id="select" resultMap="connResultMap">
+        select * from wxb_good a join wxb_good_sku b on a.good_id = b.good_id and a.good_id="73515420";
     </select>
 
+
+    <select id="queryGoodsByPage" resultMap="connResultMap">
+        select  <include refid="params"/> from wxb_good limit #{index},#{size}
+    </select>
 </mapper>
